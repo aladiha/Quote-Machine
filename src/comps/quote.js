@@ -37,9 +37,7 @@ class QuoteBox extends React.Component {
     }
 
     render(){
-        return <div id="wrapper" style={{backgroundImage: `url(${this.state.current.img})`,  backgroundColor: this.state.color,
-        backgroundBlendMode: 'screen',
-        backgroundSize: 'cover'}}>
+        return <div id="wrapper" style={{backgroundImage: `linear-gradient(to bottom right,${this.state.color} , #FFFFFF)`}}>
             <div id="quote-box">
                 <p id="text" style={{color: this.state.color}}>
                 <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>&nbsp;
