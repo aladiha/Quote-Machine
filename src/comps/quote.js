@@ -37,7 +37,6 @@ class QuoteBox extends React.Component {
     }
 
     render(){
-
         return <div id="wrapper" style={{backgroundImage: `url(${this.state.current.img})`,  backgroundColor: this.state.color,
         backgroundBlendMode: 'screen',
         backgroundSize: 'cover'}}>
@@ -50,9 +49,8 @@ class QuoteBox extends React.Component {
                     - {this.state.current.author}
                 </h4>
                 <div id="options">
-                    <a href="twitter.com/intent/tweet" target="_blank" id="tweet-quote" style={{color: this.state.color}} data-size="large"><FontAwesomeIcon icon={faTwitter} size="3x"/></a>
+                    <a className="twitter-share-button" rel="noreferrer" href={`https://twitter.com/intent/tweet?text=${this.state.current.quote} - ${this.state.current.author}`} target="_blank" id="tweet-quote" style={{color: this.state.color}} data-size="large"><FontAwesomeIcon icon={faTwitter} size="3x"/></a>
                     <button onClick={this.setRandomQuote.bind(this)} style={{backgroundColor: this.state.color}} id="new-quote">New Quote</button>
-                    {console.log(this.state.color)}
                 </div>
             </div>
         </div>
